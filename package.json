@@ -1,0 +1,25 @@
+{
+  "name": "react-pdfjs-dist",
+  "version": "1.0.0",
+  "description": "A react library to render pdf document in html",
+  "main": "./lib/react-pdfjs-dist.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/praveenkumar-kalidass/react-pdfjs-dist.git"
+  },
+  "keywords": [
+    "react",
+    "pdf",
+    "pdfjs",
+    "pdfjs-dist"
+  ],
+  "author": "Praveenkumar Kalidass <praveen.ece@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/praveenkumar-kalidass/react-pdfjs-dist/issues"
+  },
+  "homepage": "https://github.com/praveenkumar-kalidass/react-pdfjs-dist#readme"
+}
