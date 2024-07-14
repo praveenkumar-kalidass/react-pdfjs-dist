@@ -49,7 +49,6 @@ export const useReactPdf = ({ containerRef }: UseReactPdfProps): UseReactPdfResp
         () => {},
         (error) => console.error(error),
       );
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const unmountPdf = useCallback(() => {
@@ -65,7 +64,6 @@ export const useReactPdf = ({ containerRef }: UseReactPdfProps): UseReactPdfResp
         );
       }
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pdf]);
 
   useEffect(() => {
