@@ -5,10 +5,11 @@
     "noResolve": false,
     "noImplicitAny": false,
     "removeComments": true,
-    "sourceMap": false,
+    "sourceMap": true,
     "allowJs": true,
     "jsx": "react",
-    "outDir": "dist"
+    "outDir": "dist",
+    "declaration": true,
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]

@@ -12,7 +12,7 @@ interface UseReactPdfResponse {
   pdf: PDFDocumentProxy | undefined;
 }
 
-const useReactPdf = ({ containerRef }: UseReactPdfProps): UseReactPdfResponse => {
+export const useReactPdf = ({ containerRef }: UseReactPdfProps): UseReactPdfResponse => {
   const [pdf, setPdf] = useState<PDFDocumentProxy>();
 
   const renderPdf = useCallback((url: string | URL) => {
@@ -26,7 +26,12 @@ const useReactPdf = ({ containerRef }: UseReactPdfProps): UseReactPdfResponse =>
     const viewport = page.getViewport({ scale: 1, rotation: 0 });
     if (!containerRef.current) return;
     const canvasPages = containerRef.current.childNodes;
-    const canvasEl = canvasPages[index] as HTMLCanvasElement;
+    let canvasEl = canvasPages[index] as HTMLCanvasElement;
+    if (!canvasEl) {
+      canvasEl = document.createElement("canvas");
+      containerRef.current.appendChild(canvasEl);
+    }
+
     const canvasContext = canvasEl.getContext('2d');
     if (!canvasContext) return;
 
@@ -73,5 +78,3 @@ const useReactPdf = ({ containerRef }: UseReactPdfProps): UseReactPdfResponse =>
     pdf,
   };
 };
-
-export default useReactPdf;
