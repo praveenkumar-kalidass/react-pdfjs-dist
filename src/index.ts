@@ -1,1 +1,1 @@
-console.log('react-pdfjs-dist');
+export { default as useReactPdf } from './useReactPdf';

@@ -1,11 +1,15 @@
 {
   "compilerOptions": {
-    "module": "ESNext",
-    "noImplicitAny": true,
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "noResolve": false,
+    "noImplicitAny": false,
     "removeComments": true,
-    "preserveConstEnums": true,
-    "sourceMap": true
+    "sourceMap": false,
+    "allowJs": true,
+    "jsx": "react",
+    "outDir": "dist"
   },
   "include": ["src/**/*"],
-  "exclude": ["**/*.spec.ts"]
+  "exclude": ["node_modules"]
 }

@@ -4,7 +4,7 @@
   "description": "A react library to render pdf document in html",
   "main": "./lib/react-pdfjs-dist.js",
   "scripts": {
-    "build": "tsup src/index.ts",
+    "build": "tsc --build",
     "clean": "rm -rf dist"
   },
   "repository": {
@@ -25,7 +25,11 @@
   "homepage": "https://github.com/praveenkumar-kalidass/react-pdfjs-dist#readme",
   "packageManager": "yarn@1.22.21+sha1.1959a18351b811cdeedbd484a8f86c3cc3bbaf72",
   "devDependencies": {
-    "tsup": "^8.1.0",
+    "@types/react": "^18.3.3",
+    "react": "^18.3.1",
     "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "pdfjs-dist": "^4.4.168"
   }
 }
